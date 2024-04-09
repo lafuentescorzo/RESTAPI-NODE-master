@@ -1,0 +1,19 @@
+{
+  "name": "restapi-node",
+  "version": "1.0.0",
+  "description": "\"La API es una aplicación de servidor simple que utiliza el framework Express.js en Node.js. En su estado actual, la API proporciona una sola funcionalidad básica: cuando se accede a la ruta raíz ('/'), devuelve un mensaje de saludo ('Welcome to my API'). Esta API puede servir como un punto de partida para desarrollar aplicaciones más complejas o como una introducción al desarrollo de APIs utilizando Node.js y Express.\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {}
+}
