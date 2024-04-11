@@ -28,18 +28,16 @@ Sigue estos pasos para utilizar este template en tu proyecto:
 ## Dentro de este template te encontraras un archivo llamado Dockerfile el cual esta listo para cuando necesites contenerizar tu app, para hacerlo sigue estos pasos.
 
 1. **Construir la imagen Docker**: Asegúrate de tener Docker instalado en tu sistema. Desde el directorio raíz de tu proyecto, ejecuta el siguiente comando     para construir la imagen Docker.
-     docker build -t node-restapi .   
+     imagen =  docker build -t api-express:latest .
     Esto creará una imagen Docker con el nombre node-restapi, el punto al final significa que Docker buscará el Dockerfile en el directorio actual y utilizará todos los archivos y directorios en este directorio como parte del contexto de construcción, debes reemplazar los mnombres por el nombre que quieras ponerle a la imagen.
 
 2. **Ejecutar el contenedor Docker**: Una vez que la imagen se haya construido correctamente, puedes ejecutar un contenedor basado en esa imagen.
-    docker run -d -p 4000:3000  node-restapi
-    Esto ejecutará tu aplicación de node dentro de un contenedor Docker, y estará disponible en http://localhost:4000 en tu navegador.
+    ontenedor =  docker run -p 4321:4321 --env-file=.env api-express:latest  
+    Esto ejecutará tu aplicación de node dentro de un contenedor Docker, y estará disponible en http://localhost:4321 en tu navegador.
 
-  `4000`: Este es el puerto en el host (la máquina anfitriona) al que los usuarios externos enviarán solicitudes para acceder a la aplicación que se está ejecutando dentro del contenedor.
+  
 
-  `3000`: Este es el puerto en el contenedor donde la aplicación está escuchando las solicitudes entrantes.
-
- Entonces, cuando un usuario accede a través del puerto 4000 en el host, Docker redirige automáticamente esa solicitud al puerto 3000 dentro del contenedor, donde la aplicación en el contenedor está escuchando. Esto permite que los usuarios externos accedan a la aplicación en el contenedor a través del puerto 4000 en el host.
+ Entonces, cuando un usuario accede a través del puerto 4321 en el host, Docker redirige automáticamente esa solicitud al puerto 3000 dentro del contenedor, donde la aplicación en el contenedor está escuchando. Esto permite que los usuarios externos accedan a la aplicación en el contenedor a través del puerto 4000 en el host.
 
 3. **para ver la imagen creada puedes usar el siguiente comando** docker images **y luego ejecutar el contenedor basado en la imagen puedes ejecutar el siguiente comando para verlo:** docker ps.}
 
